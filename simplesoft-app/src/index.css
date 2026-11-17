@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+/* ventana de confirmación (components/ui/Confirmar.tsx): aparece con un fundido y un leve zoom */
+@keyframes confirmar-fondo { from { opacity: 0 } to { opacity: 1 } }
+@keyframes confirmar-tarjeta { from { opacity: 0; transform: translateY(8px) scale(.96) } to { opacity: 1; transform: none } }
+.confirmar-fondo { animation: confirmar-fondo .15s ease-out }
+.confirmar-tarjeta { animation: confirmar-tarjeta .18s ease-out }
+@media (prefers-reduced-motion: reduce) { .confirmar-fondo, .confirmar-tarjeta { animation: none } }
+
+body {
+  margin: 0;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}

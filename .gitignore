@@ -1,0 +1,27 @@
+@"
+# .NET
+bin/
+obj/
+.vs/
+*.user
+
+# React
+node_modules/
+dist/
+build/
+.env
+.env.*
+!.env.example
+
+# Salida de publicación
+publicar/
+
+# Backups de base de datos
+*.bak
+*.bacpac
+*.mdf
+*.ldf
+
+# Configuración local con secretos
+appsettings.Development.json
+"@ | Set-Content -Path .gitignore -Encoding utf8
