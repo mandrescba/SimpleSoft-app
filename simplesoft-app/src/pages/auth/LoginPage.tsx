@@ -3,7 +3,6 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { Home } from 'lucide-react'
 import { login } from '../../api/auth'
 import { mensajeDeError } from '../../api/axios'
 import { useAuthStore } from '../../store/authStore'
@@ -43,11 +42,10 @@ export default function LoginPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-lg p-8 w-full max-w-sm">
         <div className="flex items-center justify-center mb-4">
-          <div className="w-12 h-12 bg-blue-700 rounded-xl flex items-center justify-center">
-            <Home size={22} className="text-white" />
-          </div>
+          <h1 className="sr-only">SimpleSoft</h1>
+          <img src={`${import.meta.env.BASE_URL}logo-completo.svg`} alt="SimpleSoft" className="h-16 w-auto" />
         </div>
-        <h1 className="text-xl font-bold text-gray-800 text-center mb-6">SIIMVA Inmueble</h1>
+        <p className="text-sm text-gray-500 text-center mb-6">Sistema Contable</p>
 
         {sessionExpired && (
           <p className="text-sm text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 mb-4">

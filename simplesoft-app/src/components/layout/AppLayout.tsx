@@ -119,7 +119,9 @@ export default function AppLayout() {
   const sidebar = (
     <nav className="flex flex-col h-full">
       <div className="px-4 py-4 border-b border-gray-100">
-        <div className="text-lg font-bold text-blue-800">SimpleSoft</div>
+        <div className="flex items-center gap-2 text-lg font-bold text-blue-800">
+          <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="" className="h-7 w-auto" /> SimpleSoft
+        </div>
         <button
           onClick={() => navigate('/empresa')}
           className="mt-2 w-full flex items-center gap-2 text-left text-xs text-gray-600 hover:text-blue-700 bg-gray-50 hover:bg-blue-50 rounded-lg px-2.5 py-2 transition-colors"
