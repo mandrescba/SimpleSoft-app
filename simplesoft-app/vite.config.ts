@@ -7,7 +7,7 @@ import tailwindcss from '@tailwindcss/vite'
 // En producción el front se sirve desde la subcarpeta /cambio-denominacion-app/ de IIS (por eso el `base` del build);
 // en desarrollo sigue en la raíz. Para un hosting que sirve desde la raíz (Vercel, etc.) se compila con VITE_BASE=/ .
 export default defineConfig(({ command }) => ({
-  base: command === 'build' ? (process.env.VITE_BASE ?? '/cambio-denominacion-app/') : '/',
+  base: command === 'build' ? (process.env.VITE_BASE ?? '/') : '/',
   plugins: [react(), tailwindcss()],
   server: {
     port: 5175,
